@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Bachelor1/i2c/LA_i2c_nILA/LogicAnalyzer.sim/sim_1/synth/timing/xsim/tb_i2c_main_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-311] analyzing module i2c_main
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/i2c/LA_i2c_nILA/LogicAnalyzer.srcs/sim_1/new/tb_i2c_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_i2c_main'

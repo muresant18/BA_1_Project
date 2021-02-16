@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Feb 16 09:11:36 2021
+# Process ID: 3552
+# Current directory: C:/Bachelor1/i2c/i2c_ILA_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4876 C:\Bachelor1\i2c\i2c_ILA_final\LogicAnalyzer.xpr
+# Log file: C:/Bachelor1/i2c/i2c_ILA_final/vivado.log
+# Journal file: C:/Bachelor1/i2c/i2c_ILA_final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Bachelor1/i2c/i2c_ILA_final/LogicAnalyzer.xpr
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Bachelor1/i2c/i2c_ILA_final/LogicAnalyzer.runs/impl_1/i2c_main.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_final/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_final/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_final/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_final/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Bachelor1/i2c/i2c_ILA_final/LogicAnalyzer.runs/impl_1/i2c_main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
