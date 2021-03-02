@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../../LogicAnalyzer.srcs/sim_1/new/tb_i2c_main.vhd" \
-
-# Do not sort compile order
-nosort

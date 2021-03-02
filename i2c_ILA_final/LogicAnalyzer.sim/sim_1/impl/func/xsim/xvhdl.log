@@ -1,5 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/i2c/LA_i2c_nILA/LogicAnalyzer.sim/sim_1/impl/func/xsim/tb_i2c_main_func_impl.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'debouncer'
-INFO: [VRFC 10-3107] analyzing entity 'i2c_main'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/i2c/LA_i2c_nILA/LogicAnalyzer.srcs/sim_1/new/tb_i2c_main.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_i2c_main'
