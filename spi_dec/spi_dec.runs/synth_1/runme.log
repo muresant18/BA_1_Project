@@ -1,0 +1,262 @@
+
+*** Running vivado
+    with args -log spi_main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source spi_main.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source spi_main.tcl -notrace
+Command: synth_design -top spi_main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2740
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1023.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'spi_main' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:42]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/debouncer.vhd:25' bound to instance 'RST_BTN' of component 'debouncer' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/debouncer.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (1#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/debouncer.vhd:31]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:30' bound to instance 'MISO_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:39]
+WARNING: [Synth 8-151] case item 1'b1 is unreachable [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'sig_synch' (2#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:39]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:30' bound to instance 'MOSI_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:112]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:30' bound to instance 'SCK_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:120]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:30' bound to instance 'SS_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'spi_main' (3#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1023.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1023.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1023.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1023.977 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc]
+Finished Parsing XDC File [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/spi_main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/spi_main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1028.906 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1028.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1028.906 ; gain = 4.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1028.906 ; gain = 4.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property MARK_DEBUG = true for byte_cnt[1]. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 68).
+Applied set_property MARK_DEBUG = true for miso_data[0]. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 77).
+Applied set_property MARK_DEBUG = true for pck_cnt[0]. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 86).
+Applied set_property MARK_DEBUG = true for display_data. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 102).
+Applied set_property MARK_DEBUG = true for miso. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 103).
+Applied set_property MARK_DEBUG = true for mosi. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 104).
+Applied set_property MARK_DEBUG = true for sck. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 105).
+Applied set_property MARK_DEBUG = true for ss. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 106).
+Applied set_property MARK_DEBUG = true for mosi_data[0]. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 108).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1028.906 ; gain = 4.930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MISO_SYNCH'. This will prevent further optimization [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:104]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MOSI_SYNCH'. This will prevent further optimization [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:112]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'SCK_SYNCH'. This will prevent further optimization [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:120]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'SS_SYNCH'. This will prevent further optimization [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:128]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_main'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 standby |                               00 |                               00
+                    idle |                               01 |                               01
+                    read |                               10 |                               10
+               upd_index |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi_main'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1028.906 ; gain = 4.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input   15 Bit        Muxes := 2     
+	   4 Input   15 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 5     
+	   4 Input    8 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1028.906 ; gain = 4.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1028.906 ; gain = 4.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1035.652 ; gain = 11.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1036.457 ; gain = 12.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     9|
+|3     |LUT1   |     2|
+|4     |LUT2   |    30|
+|5     |LUT3   |     7|
+|6     |LUT4   |     6|
+|7     |LUT5   |    20|
+|8     |LUT6   |    31|
+|9     |FDCE   |    45|
+|10    |FDRE   |    45|
+|11    |IBUF   |     6|
+|12    |OBUF   |    16|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 1042.250 ; gain = 13.344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1042.250 ; gain = 18.273
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1053.313 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1054.891 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 1054.891 ; gain = 30.914
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/Bachelor1/spi/spi_dec/spi_dec.runs/synth_1/spi_main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file spi_main_utilization_synth.rpt -pb spi_main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  2 12:17:19 2021...

@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Mar  2 18:40:18 2021
+# Process ID: 9912
+# Current directory: C:/Bachelor1/spi/spi_dec
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8272 C:\Bachelor1\spi\spi_dec\spi_dec.xpr
+# Log file: C:/Bachelor1/spi/spi_dec/vivado.log
+# Journal file: C:/Bachelor1/spi/spi_dec\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Bachelor1/spi/spi_dec/spi_dec.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_spi_main.tcl
+restart
+run 300 us
+restart
+run 60 us
+restart
+run 45 us
+restart
+run 38 us
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim

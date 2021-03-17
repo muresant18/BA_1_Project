@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sig_synch'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'spi_main'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sim_1/new/tb_spi_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_spi_main'

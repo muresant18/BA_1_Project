@@ -1,0 +1,502 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Feb 14 15:28:36 2021
+# Process ID: 12164
+# Current directory: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9668 C:\Bachelor1\i2c\i2c_ILA_sud_no_outputs\LogicAnalyzer.xpr
+# Log file: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/vivado.log
+# Journal file: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 1030.094 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 4
+[Sun Feb 14 15:30:03 2021] Launched synth_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/synth_1/runme.log
+[Sun Feb 14 15:30:03 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Feb 14 15:35:02 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+Warning: Cannot create '3000:arm' GDB server: An attempt was made to access a socket in a way forbidden by its access permissions
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 1810.723 ; gain = 23.977
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A37B08A
+open_hw_target: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2242.242 ; gain = 431.520
+set_property PROGRAM.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+refresh_hw_device: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2269.867 ; gain = 21.297
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 15:37:47
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 15:37:51
+INFO: [Labtools 27-2213] The ILA core 'hw_ila_1' captured one window with '7339' samples.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sun Feb 14 15:39:34 2021] Launched synth_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/synth_1/runme.log
+[Sun Feb 14 15:39:34 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Feb 14 15:44:41 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 15:46:32
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 15:46:36
+INFO: [Labtools 27-2213] The ILA core 'hw_ila_1' captured one window with '8782' samples.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sun Feb 14 15:48:52 2021] Launched synth_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/synth_1/runme.log
+[Sun Feb 14 15:48:52 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Feb 14 15:53:46 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 15:55:42
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 15:55:44
+INFO: [Labtools 27-2213] The ILA core 'hw_ila_1' captured one window with '4124' samples.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 15:57:14
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 15:57:17
+INFO: [Labtools 27-2213] The ILA core 'hw_ila_1' captured one window with '4971' samples.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property CAPTURE_COMPARE_VALUE eq1'b1 [get_hw_probes trigger_flag -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 15:58:21
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Feb-14 15:58:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property CAPTURE_COMPARE_VALUE eq1'bX [get_hw_probes trigger_flag -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes trigger_flag -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CONTROL.TRIGGER_POSITION 10000 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 15:59:05
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Feb-14 15:59:05
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:00:15
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Feb-14 16:00:15
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:00:39
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Feb-14 16:00:39
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:00:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Feb-14 16:00:53
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes trigger_flag -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CAPTURE_COMPARE_VALUE eq1'bR [get_hw_probes trigger_flag -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:01:14
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 16:01:16
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:01:19
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 16:01:23
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:01:28
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 16:01:35
+INFO: [Labtools 27-2213] The ILA core 'hw_ila_1' captured one window with '12628' samples.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_i2c_main' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_i2c_main_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.srcs/sources_1/new/i2c_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2c_main'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xelab -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.i2c_main [i2c_main_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_i2c_main
+Built simulation snapshot tb_i2c_main_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_i2c_main_behav -key {Behavioral:sim_1:Functional:tb_i2c_main} -tclbatch {tb_i2c_main.tcl} -view {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg
+source tb_i2c_main.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_i2c_main_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 2333.879 ; gain = 0.480
+run 1500 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_i2c_main' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_i2c_main_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.srcs/sources_1/new/i2c_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2c_main'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xelab -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.i2c_main [i2c_main_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_i2c_main
+Built simulation snapshot tb_i2c_main_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_i2c_main_behav -key {Behavioral:sim_1:Functional:tb_i2c_main} -tclbatch {tb_i2c_main.tcl} -view {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg
+source tb_i2c_main.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_i2c_main_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2542.754 ; gain = 0.000
+run 1500 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_i2c_main' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_i2c_main_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.srcs/sources_1/new/i2c_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2c_main'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xelab -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.i2c_main [i2c_main_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_i2c_main
+Built simulation snapshot tb_i2c_main_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_i2c_main_behav -key {Behavioral:sim_1:Functional:tb_i2c_main} -tclbatch {tb_i2c_main.tcl} -view {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg
+source tb_i2c_main.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_i2c_main_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2542.754 ; gain = 0.000
+run 1500 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_i2c_main' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_i2c_main_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.srcs/sources_1/new/i2c_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2c_main'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+"xelab -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d98127ed60f945c1a2fb171453279a1f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_i2c_main_behav xil_defaultlib.tb_i2c_main -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.i2c_main [i2c_main_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_i2c_main
+Built simulation snapshot tb_i2c_main_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_i2c_main_behav -key {Behavioral:sim_1:Functional:tb_i2c_main} -tclbatch {tb_i2c_main.tcl} -view {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg
+source tb_i2c_main.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_i2c_main_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2542.754 ; gain = 0.000
+run 1500 us
+save_wave_config {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/tb_i2c_main_behav.wcfg}
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/synth_1
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_runs impl_1 -jobs 4
+[Sun Feb 14 16:21:04 2021] Launched synth_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/synth_1/runme.log
+[Sun Feb 14 16:21:04 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Feb 14 16:26:13 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:28:11
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 16:28:13
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:28:17
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 16:28:21
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:28:23
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 16:28:30
+INFO: [Labtools 27-2213] The ILA core 'hw_ila_1' captured one window with '12306' samples.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sun Feb 14 16:34:02 2021] Launched synth_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/synth_1/runme.log
+[Sun Feb 14 16:34:02 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Feb 14 16:39:11 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.runs/impl_1/i2c_main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:41:03
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Feb-14 16:41:09
+INFO: [Labtools 27-2213] The ILA core 'hw_ila_1' captured one window with '11199' samples.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property CONTROL.TRIGGER_POSITION 5000 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:41:35
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Feb-14 16:41:44
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property CAPTURE_COMPARE_VALUE neq8'hXX [get_hw_probes byte_cnt -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CAPTURE_COMPARE_VALUE neq8'u0 [get_hw_probes byte_cnt -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Feb-14 16:42:31
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Feb-14 16:42:44
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {C:/Bachelor1/i2c/i2c_ILA_sud_no_outputs/LogicAnalyzer.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 14 16:44:34 2021...
