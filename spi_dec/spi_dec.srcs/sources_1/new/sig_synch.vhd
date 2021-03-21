@@ -19,7 +19,8 @@
 -- Dependencies: 
 -- 
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.02 - Digital Filter updated:
+--                      Metastability handling added                
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -38,7 +39,7 @@ end sig_synch;
 
 architecture Behavioral of sig_synch is
 
-    signal q0, q1, q2, q3, q4, sig_0 : std_logic := '0';
+    signal q0, q1, q2, q3, q4, q5, q6, q7, sig_0 : std_logic := '0';
 
 begin
 
@@ -54,16 +55,22 @@ begin
 
              q0  <= sig_0;
              q1  <= q0;
-             q2  <= q1 and sig_0;
-             q3  <= q2 and sig_0;
-             q4  <= q3;     
-
+             q2  <= q1;
+             q3  <= q2;
+             q4  <= q3;
+             -- q5 is asynchron (the first 5 flip-flops ANDed)
+             q6 <= q5;
+             q7 <= q6; 
+                  
         end if;
     end process EDGE_DET;
     
     -- Concurrent Conditional
-    pos_edge  <= not q4 and q3; -- active high pulse on rising edge of sda
-    neg_edge  <= q4 and not q3 ; -- active high pulse on falling edge of sda
-    synch_sig <= q4; 
+    pos_edge  <= not q7 and q6; -- active high pulse on rising edge of sda
+    neg_edge  <= q7 and not q6 ; -- active high pulse on falling edge of sda
+    synch_sig <= q7; 
+    
+    q5 <= q0 and q1 and q2 and q3 and q4;
 
 end Behavioral;
+

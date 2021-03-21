@@ -1,6 +1,6 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_spi_main_behav xil_defaultlib.tb_spi_main -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,11 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture rtl of entity xil_defaultlib.debouncer [debouncer_default]
 Compiling architecture behavioral of entity xil_defaultlib.sig_synch [sig_synch_default]
-Compiling architecture behavioral of entity xil_defaultlib.spi_main [spi_main_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_spi_main
-Built simulation snapshot tb_spi_main_behav
+Compiling architecture behavioral of entity xil_defaultlib.tb_sig_synch
+Built simulation snapshot tb_sig_synch_behav

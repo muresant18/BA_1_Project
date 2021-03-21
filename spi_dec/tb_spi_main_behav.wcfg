@@ -3,114 +3,88 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_spi_main_behav.wdb" id="1">
+      <db_ref path="tb_sig_synch_behav.wdb" id="1">
          <top_modules>
-            <top_module name="tb_spi_main" />
+            <top_module name="tb_sig_synch" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8768334fs"></ZoomStartTime>
-      <ZoomEndTime time="10100335fs"></ZoomEndTime>
-      <Cursor1Time time="9235000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1000001fs"></ZoomEndTime>
+      <Cursor1Time time="935000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="136"></NameColumnWidth>
-      <ValueColumnWidth column_width="65"></ValueColumnWidth>
+      <NameColumnWidth column_width="131"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
-   <wvobject fp_name="/tb_spi_main/UUT/clk" type="logic">
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/tb_sig_synch/UUT/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/mosi_in" type="logic">
-      <obj_property name="ElementShortName">mosi_in</obj_property>
-      <obj_property name="ObjectShortName">mosi_in</obj_property>
-      <obj_property name="CustomSignalColor">#0000A0</obj_property>
+      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/mosi" type="logic">
-      <obj_property name="ElementShortName">mosi</obj_property>
-      <obj_property name="ObjectShortName">mosi</obj_property>
-      <obj_property name="CustomSignalColor">#0000A0</obj_property>
+   <wvobject fp_name="/tb_sig_synch/UUT/input_sig" type="logic">
+      <obj_property name="ElementShortName">input_sig</obj_property>
+      <obj_property name="ObjectShortName">input_sig</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/miso_in" type="logic">
-      <obj_property name="ElementShortName">miso_in</obj_property>
-      <obj_property name="ObjectShortName">miso_in</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+   <wvobject fp_name="/tb_sig_synch/UUT/sig_0" type="logic">
+      <obj_property name="ElementShortName">sig_0</obj_property>
+      <obj_property name="ObjectShortName">sig_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/q0" type="logic">
+      <obj_property name="ElementShortName">q0</obj_property>
+      <obj_property name="ObjectShortName">q0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/q1" type="logic">
+      <obj_property name="ElementShortName">q1</obj_property>
+      <obj_property name="ObjectShortName">q1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/q2" type="logic">
+      <obj_property name="ElementShortName">q2</obj_property>
+      <obj_property name="ObjectShortName">q2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/q3" type="logic">
+      <obj_property name="ElementShortName">q3</obj_property>
+      <obj_property name="ObjectShortName">q3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/q4" type="logic">
+      <obj_property name="ElementShortName">q4</obj_property>
+      <obj_property name="ObjectShortName">q4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/q5" type="logic">
+      <obj_property name="ElementShortName">q5</obj_property>
+      <obj_property name="ObjectShortName">q5</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/miso" type="logic">
-      <obj_property name="ElementShortName">miso</obj_property>
-      <obj_property name="ObjectShortName">miso</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+   <wvobject fp_name="/tb_sig_synch/UUT/q6" type="logic">
+      <obj_property name="ElementShortName">q6</obj_property>
+      <obj_property name="ObjectShortName">q6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/q7" type="logic">
+      <obj_property name="ElementShortName">q7</obj_property>
+      <obj_property name="ObjectShortName">q7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_sig_synch/UUT/synch_sig" type="logic">
+      <obj_property name="ElementShortName">synch_sig</obj_property>
+      <obj_property name="ObjectShortName">synch_sig</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/ss_in" type="logic">
-      <obj_property name="ElementShortName">ss_in</obj_property>
-      <obj_property name="ObjectShortName">ss_in</obj_property>
-      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+   <wvobject fp_name="/tb_sig_synch/UUT/neg_edge" type="logic">
+      <obj_property name="ElementShortName">neg_edge</obj_property>
+      <obj_property name="ObjectShortName">neg_edge</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/ss" type="logic">
-      <obj_property name="ElementShortName">ss</obj_property>
-      <obj_property name="ObjectShortName">ss</obj_property>
-      <obj_property name="CustomSignalColor">#D2691E</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/sck_in" type="logic">
-      <obj_property name="ElementShortName">sck_in</obj_property>
-      <obj_property name="ObjectShortName">sck_in</obj_property>
-      <obj_property name="CustomSignalColor">#008080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/sck" type="logic">
-      <obj_property name="ElementShortName">sck</obj_property>
-      <obj_property name="ObjectShortName">sck</obj_property>
-      <obj_property name="CustomSignalColor">#008080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/state" type="other">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-      <obj_property name="CustomSignalColor">#808080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/bit_cnt" type="other">
-      <obj_property name="ElementShortName">bit_cnt</obj_property>
-      <obj_property name="ObjectShortName">bit_cnt</obj_property>
-      <obj_property name="CustomSignalColor">#808080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/byte_cnt" type="other">
-      <obj_property name="ElementShortName">byte_cnt</obj_property>
-      <obj_property name="ObjectShortName">byte_cnt</obj_property>
-      <obj_property name="CustomSignalColor">#808080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/pck_cnt" type="array">
-      <obj_property name="ElementShortName">pck_cnt[14:0]</obj_property>
-      <obj_property name="ObjectShortName">pck_cnt[14:0]</obj_property>
-      <obj_property name="CustomSignalColor">#808080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/display_data" type="logic">
-      <obj_property name="ElementShortName">display_data</obj_property>
-      <obj_property name="ObjectShortName">display_data</obj_property>
-      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/mosi_data" type="array">
-      <obj_property name="ElementShortName">mosi_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mosi_data[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#0000A0</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_spi_main/UUT/miso_data" type="array">
-      <obj_property name="ElementShortName">miso_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">miso_data[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+   <wvobject fp_name="/tb_sig_synch/UUT/pos_edge" type="logic">
+      <obj_property name="ElementShortName">pos_edge</obj_property>
+      <obj_property name="ObjectShortName">pos_edge</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

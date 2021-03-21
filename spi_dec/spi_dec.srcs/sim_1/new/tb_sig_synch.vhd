@@ -87,7 +87,18 @@ STIMULATION_INPUT_SIGNAL: process
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 21 ns;
         input_sig <= '0';
+        wait for 39 ns;
+        
+        input_sig <= '1';   -- short pulse, shold not be syhcnronized
+            wait for 38 ns;
+        input_sig <= '0';
         wait for 31 ns;
+        
+        input_sig <= '1';   -- short pulse, but it will be synchronyzed as a valid signal !!!
+            wait for 48 ns;
+        input_sig <= '0';
+        wait for 31 ns;
+        
         
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 4 ns;

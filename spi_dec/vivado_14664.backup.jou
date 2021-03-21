@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Mar  2 23:09:03 2021
+# Process ID: 14664
+# Current directory: C:/Bachelor1/spi/spi_dec
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12752 C:\Bachelor1\spi\spi_dec\spi_dec.xpr
+# Log file: C:/Bachelor1/spi/spi_dec/vivado.log
+# Journal file: C:/Bachelor1/spi/spi_dec\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Bachelor1/spi/spi_dec/spi_dec.xpr
+update_compile_order -fileset sources_1

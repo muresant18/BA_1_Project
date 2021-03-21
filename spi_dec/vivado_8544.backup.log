@@ -1,0 +1,352 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Mar 21 09:07:17 2021
+# Process ID: 8544
+# Current directory: C:/Bachelor1/spi/spi_dec
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6928 C:\Bachelor1\spi\spi_dec\spi_dec.xpr
+# Log file: C:/Bachelor1/spi/spi_dec/vivado.log
+# Journal file: C:/Bachelor1/spi/spi_dec\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Bachelor1/spi/spi_dec/spi_dec.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:15 . Memory (MB): peak = 1015.273 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property top tb_sig_synch [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sig_synch' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_sig_synch_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sig_synch'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sim_1/new/tb_sig_synch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_sig_synch'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xelab -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.sig_synch [sig_synch_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_sig_synch
+Built simulation snapshot tb_sig_synch_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim/xsim.dir/tb_sig_synch_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim/xsim.dir/tb_sig_synch_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Mar 21 10:21:14 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Mar 21 10:21:14 2021...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1015.273 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sig_synch_behav -key {Behavioral:sim_1:Functional:tb_sig_synch} -tclbatch {tb_sig_synch.tcl} -view {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+WARNING: Simulation object /tb_spi_main/UUT/clk was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/mosi_in was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/mosi was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/miso_in was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/miso was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/ss_in was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/ss was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/sck_in was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/sck was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/state was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/bit_cnt was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/byte_cnt was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/pck_cnt was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/display_data was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/mosi_data was not found in the design.
+WARNING: Simulation object /tb_spi_main/UUT/miso_data was not found in the design.
+source tb_sig_synch.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1015.273 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sig_synch_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1015.273 ; gain = 0.000
+run 150 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.273 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sig_synch' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_sig_synch_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sig_synch'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xelab -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.sig_synch [sig_synch_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_sig_synch
+Built simulation snapshot tb_sig_synch_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sig_synch_behav -key {Behavioral:sim_1:Functional:tb_sig_synch} -tclbatch {tb_sig_synch.tcl} -view {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sig_synch_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.273 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sig_synch' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_sig_synch_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sig_synch'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xelab -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.sig_synch [sig_synch_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_sig_synch
+Built simulation snapshot tb_sig_synch_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sig_synch_behav -key {Behavioral:sim_1:Functional:tb_sig_synch} -tclbatch {tb_sig_synch.tcl} -view {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sig_synch_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.273 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sig_synch' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_sig_synch_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sim_1/new/tb_sig_synch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_sig_synch'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xelab -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.sig_synch [sig_synch_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_sig_synch
+Built simulation snapshot tb_sig_synch_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sig_synch_behav -key {Behavioral:sim_1:Functional:tb_sig_synch} -tclbatch {tb_sig_synch.tcl} -view {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sig_synch_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.273 ; gain = 0.000
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sig_synch' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_sig_synch_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sim_1/new/tb_sig_synch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_sig_synch'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+"xelab -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 8ce7815774a742d1b5ba9a00d94f06ea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sig_synch_behav xil_defaultlib.tb_sig_synch -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.sig_synch [sig_synch_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_sig_synch
+Built simulation snapshot tb_sig_synch_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Bachelor1/spi/spi_dec/spi_dec.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sig_synch_behav -key {Behavioral:sim_1:Functional:tb_sig_synch} -tclbatch {tb_sig_synch.tcl} -view {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sig_synch_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.273 ; gain = 0.000
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sun Mar 21 10:34:53 2021] Launched synth_1...
+Run output will be captured here: C:/Bachelor1/spi/spi_dec/spi_dec.runs/synth_1/runme.log
+[Sun Mar 21 10:34:54 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/spi/spi_dec/spi_dec.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 21 11:11:41 2021] Launched impl_1...
+Run output will be captured here: C:/Bachelor1/spi/spi_dec/spi_dec.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 21 11:18:07 2021...
