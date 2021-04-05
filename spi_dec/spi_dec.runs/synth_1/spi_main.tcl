@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
@@ -88,6 +89,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
+  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/SR_FF.vhd
   C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/debouncer.vhd
   C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd
   C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd

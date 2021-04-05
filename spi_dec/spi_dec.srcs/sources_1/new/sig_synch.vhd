@@ -19,8 +19,11 @@
 -- Dependencies: 
 -- 
 -- Revision:
--- Revision 0.02 - Digital Filter updated:
---                      Metastability handling added                
+-- Revision 0.03 - Digital Filter updated:
+--               - Metastability handling added     
+--               - NOR gate added and used as RESET for the RS-Flip-Flop
+--               - RS-Flip-Flop is implemented in a separate module
+         
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -40,8 +43,23 @@ end sig_synch;
 architecture Behavioral of sig_synch is
 
     signal q0, q1, q2, q3, q4, q5, q6, q7, sig_0 : std_logic := '0';
-
+    signal S, R, Q_SR_FF: std_logic := '0';
+    
+    -- the RS-Flip-Flop is implemented in a separate module
+    component SR_FF
+    port( clk  : in std_logic; -- system clock, 100MHz
+          S    : in std_logic;
+          R    : in std_logic;
+          Q: out std_logic );
+    end component;
+ 
 begin
+
+    SET_RST_FF: SR_FF
+    PORT MAP(clk => clk,
+               S => q5,
+               R => q6,
+               Q => Q_SR_FF );
 
      -- Convert signals from H and L to 1 and 0
      -- INFO: this code line causes a warning: "case item 1'1b is unreachnable" 
@@ -58,19 +76,20 @@ begin
              q2  <= q1;
              q3  <= q2;
              q4  <= q3;
-             -- q5 is asynchron (the first 5 flip-flops ANDed)
-             q6 <= q5;
-             q7 <= q6; 
+
+             q7 <= Q_SR_FF; 
                   
         end if;
     end process EDGE_DET;
     
     -- Concurrent Conditional
-    pos_edge  <= not q7 and q6; -- active high pulse on rising edge of sda
-    neg_edge  <= q7 and not q6 ; -- active high pulse on falling edge of sda
+    pos_edge  <= not q7 and Q_SR_FF; -- active high pulse on rising edge of sda
+    neg_edge  <= q7 and not Q_SR_FF ; -- active high pulse on falling edge of sda
     synch_sig <= q7; 
     
-    q5 <= q0 and q1 and q2 and q3 and q4;
+    q5 <=  q1 and q2 and q3 and q4;
+--    q6 <= NOT ( q1 or q2 or q3 or q4); -- this version would not work, since the algorithm reacts to late on the falling edges
+    q6 <= NOT ( q1 or q2 );
 
 end Behavioral;
 

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Mar 21 13:12:39 2021
-# Process ID: 6980
+# Start of session at: Mon Apr  5 16:45:45 2021
+# Process ID: 8584
 # Current directory: C:/Bachelor1/spi/spi_dec/spi_dec.runs/synth_1
 # Command line: vivado.exe -log spi_main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source spi_main.tcl
 # Log file: C:/Bachelor1/spi/spi_dec/spi_dec.runs/synth_1/spi_main.vds

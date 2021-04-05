@@ -1,0 +1,82 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Apr  5 11:42:18 2021
+# Process ID: 11604
+# Current directory: C:/Bachelor1/spi/spi_dec
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent652 C:\Bachelor1\spi\spi_dec\spi_dec.xpr
+# Log file: C:/Bachelor1/spi/spi_dec/vivado.log
+# Journal file: C:/Bachelor1/spi/spi_dec\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Bachelor1/spi/spi_dec/spi_dec.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/SR_FF.vhd w ]
+add_files C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/SR_FF.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+restart
+run 500 ns
+close_sim
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+restart
+run 800 ns
+restart
+run 1 us
+restart
+run 2 us
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+restart
+run 2 us
+close_sim
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+restart
+run 2 us
+restart
+run 1400 ns
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg
+source tb_sig_synch.tcl
+restart
+run 1400 ns
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+save_wave_config {C:/Bachelor1/spi/spi_dec/tb_spi_main_behav.wcfg}
+close_sim
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag

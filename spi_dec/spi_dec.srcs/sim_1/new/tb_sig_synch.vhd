@@ -58,7 +58,7 @@ begin
 STIMULATION_INPUT_SIGNAL: process
     begin
         
-        wait for 47 ns;
+        wait for 44 ns;
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 2 ns;
         input_sig <= '0';
@@ -66,7 +66,7 @@ STIMULATION_INPUT_SIGNAL: process
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 7 ns;
         input_sig <= '0';
-        wait for 17 ns;
+        wait for 37 ns;
         
         wait for 50 ns;
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
@@ -77,8 +77,18 @@ STIMULATION_INPUT_SIGNAL: process
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 11 ns;
         input_sig <= '0';
-        wait for 21 ns;
+        wait for 41 ns;
         
+        input_sig <= '1';    -- short pulse, shold not be syhcnronized
+            wait for 30 ns;
+        input_sig <= '0';
+        wait for 70 ns;
+        
+        input_sig <= '1';   -- valid signal, must be synchronized ===========================
+            wait for 40 ns;
+        input_sig <= '0';
+        wait for 70 ns;
+                
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 17 ns;
         input_sig <= '0';
@@ -87,18 +97,8 @@ STIMULATION_INPUT_SIGNAL: process
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 21 ns;
         input_sig <= '0';
-        wait for 39 ns;
-        
-        input_sig <= '1';   -- short pulse, shold not be syhcnronized
-            wait for 38 ns;
-        input_sig <= '0';
-        wait for 31 ns;
-        
-        input_sig <= '1';   -- short pulse, but it will be synchronyzed as a valid signal !!!
-            wait for 48 ns;
-        input_sig <= '0';
-        wait for 31 ns;
-        
+        wait for 33 ns;
+
         
             input_sig <= '1';   -- short pulse, shold not be syhcnronized
             wait for 4 ns;
@@ -118,19 +118,43 @@ STIMULATION_INPUT_SIGNAL: process
             wait for 4 ns;
         input_sig <= '0';
         wait for 50 ns;
---            input_sig <= '1';   -- short pulse, shold not be syhcnronized
---            wait for 6 ns;
---        input_sig <= '0';                
---        wait for 60 ns;        
-     
-            input_sig <= '1';   -- valid signal, must be synchronized
-            wait for 80 ns;
-        input_sig <= '0';
-        wait for 50 ns;
+  
+
              
-            input_sig <= '1';   -- valid signal, must be synchronized
+            input_sig <= '1';   -- valid signal, must be synchronized ===========================
             wait for 140 ns;
         input_sig <= '0';   
+        
+        wait for 200 ns;
+        
+        -- Interferences from high to low: ----------------------------------------------
+        
+        input_sig <= '1';
+        wait for 80 ns;
+            input_sig <= '0';   
+            wait for 6 ns;
+        
+        input_sig <= '1';
+        wait for 33 ns;
+            input_sig <= '0';   
+            wait for 13 ns;
+                    
+        input_sig <= '1';
+        wait for 43 ns;
+            input_sig <= '0';   
+            wait for 10 ns;
+            
+        input_sig <= '1';
+        wait for 41 ns;
+            input_sig <= '0';   
+            wait for 11 ns;    
+            
+        input_sig <= '1';
+        wait for 45 ns;
+            input_sig <= '0';   
+            wait for 15 ns;    
+            
+        input_sig <= '1';    
         wait;
     
     end process;

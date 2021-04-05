@@ -10,6 +10,7 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.SR_FF [sr_ff_default]
 Compiling architecture behavioral of entity xil_defaultlib.sig_synch [sig_synch_default]
 Compiling architecture behavioral of entity xil_defaultlib.tb_sig_synch
 Built simulation snapshot tb_sig_synch_behav

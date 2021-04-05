@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Mar 21 13:12:39 2021
-# Process ID: 6980
+# Start of session at: Mon Apr  5 16:45:45 2021
+# Process ID: 8584
 # Current directory: C:/Bachelor1/spi/spi_dec/spi_dec.runs/synth_1
 # Command line: vivado.exe -log spi_main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source spi_main.tcl
 # Log file: C:/Bachelor1/spi/spi_dec/spi_dec.runs/synth_1/spi_main.vds
@@ -17,35 +17,38 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12404
+INFO: [Synth 8-7075] Helper process launched with PID 12644
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1015.184 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1027.598 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'spi_main' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:42]
 INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/debouncer.vhd:25' bound to instance 'RST_BTN' of component 'debouncer' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:98]
 INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/debouncer.vhd:31]
 INFO: [Synth 8-256] done synthesizing module 'debouncer' (1#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/debouncer.vhd:31]
-INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:31' bound to instance 'MISO_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:40]
-WARNING: [Synth 8-151] case item 1'b1 is unreachable [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'sig_synch' (2#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:40]
-INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:31' bound to instance 'MOSI_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:112]
-INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:31' bound to instance 'SCK_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:120]
-INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:31' bound to instance 'SS_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:128]
-INFO: [Synth 8-256] done synthesizing module 'spi_main' (3#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:42]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:34' bound to instance 'MISO_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:43]
+INFO: [Synth 8-3491] module 'SR_FF' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/SR_FF.vhd:29' bound to instance 'SET_RST_FF' of component 'SR_FF' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'SR_FF' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/SR_FF.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'SR_FF' (2#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/SR_FF.vhd:36]
+WARNING: [Synth 8-151] case item 1'b1 is unreachable [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'sig_synch' (3#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:43]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:34' bound to instance 'MOSI_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:112]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:34' bound to instance 'SCK_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:120]
+INFO: [Synth 8-3491] module 'sig_synch' declared at 'C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/sig_synch.vhd:34' bound to instance 'SS_SYNCH' of component 'sig_synch' [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'spi_main' (4#1) [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:42]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1015.184 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1027.598 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1015.184 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1027.598 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1015.184 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1027.598 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1015.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1027.598 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -56,20 +59,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/spi_main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1035.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1034.160 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1035.578 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1034.160 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1035.578 ; gain = 20.395
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1034.160 ; gain = 6.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1035.578 ; gain = 20.395
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1034.160 ; gain = 6.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -84,7 +87,7 @@ Applied set_property MARK_DEBUG = true for sck. (constraint file  C:/Bachelor1/s
 Applied set_property MARK_DEBUG = true for ss. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 106).
 Applied set_property MARK_DEBUG = true for mosi_data[0]. (constraint file  C:/Bachelor1/spi/spi_dec/spi_dec.srcs/constrs_1/new/spi_constr.xdc, line 108).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1035.578 ; gain = 20.395
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1034.160 ; gain = 6.562
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MISO_SYNCH'. This will prevent further optimization [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:104]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MOSI_SYNCH'. This will prevent further optimization [C:/Bachelor1/spi/spi_dec/spi_dec.srcs/sources_1/new/spi_main.vhd:112]
@@ -101,7 +104,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi_main'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1035.578 ; gain = 20.395
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1034.160 ; gain = 6.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -122,7 +125,7 @@ Detailed RTL Component Info :
 	   4 Input    8 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 6     
 	   4 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -140,25 +143,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1035.578 ; gain = 20.395
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1034.160 ; gain = 6.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1035.578 ; gain = 20.395
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1034.160 ; gain = 6.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1037.480 ; gain = 22.297
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1039.457 ; gain = 11.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1038.312 ; gain = 23.129
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1040.121 ; gain = 12.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -176,37 +179,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -236,27 +239,27 @@ Report Cell Usage:
 |12    |OBUF   |    16|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 1045.016 ; gain = 9.438
-Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1045.016 ; gain = 29.832
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 1046.773 ; gain = 12.613
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1046.773 ; gain = 19.176
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1055.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1057.199 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1058.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1060.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+35 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:22 . Memory (MB): peak = 1058.020 ; gain = 42.836
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1060.664 ; gain = 33.066
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/Bachelor1/spi/spi_dec/spi_dec.runs/synth_1/spi_main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file spi_main_utilization_synth.rpt -pb spi_main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 21 13:14:16 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  5 16:46:53 2021...

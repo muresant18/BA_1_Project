@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Sun Mar 21 13:18:07 2021
+| Date             : Mon Apr  5 16:50:39 2021
 | Host             : DESKTOP-4A9L7PJ running 64-bit major release  (build 9200)
 | Command          : report_power -file spi_main_power_routed.rpt -pb spi_main_power_summary_routed.pb -rpx spi_main_power_routed.rpx
 | Design           : spi_main
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.096        |
+| Total On-Chip Power (W)  | 0.097        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.024        |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.012 |        4 |       --- |             --- |
-| Slice Logic              |     0.001 |     5881 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1704 |     20800 |            8.19 |
+| Clocks                   |     0.013 |        4 |       --- |             --- |
+| Slice Logic              |     0.001 |     5889 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1705 |     20800 |            8.20 |
 |   Register               |    <0.001 |     2961 |     41600 |            7.12 |
 |   CARRY4                 |    <0.001 |       88 |      8150 |            1.08 |
 |   LUT as Shift Register  |    <0.001 |      198 |      9600 |            2.06 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      9600 |            0.25 |
 |   F7/F8 Muxes            |    <0.001 |       20 |     32600 |            0.06 |
-|   Others                 |     0.000 |      445 |       --- |             --- |
-| Signals                  |     0.002 |     4136 |       --- |             --- |
+|   Others                 |     0.000 |      453 |       --- |             --- |
+| Signals                  |     0.002 |     4142 |       --- |             --- |
 | Block RAM                |     0.003 |       20 |        50 |           40.00 |
 | I/O                      |     0.005 |       22 |       106 |           20.75 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.096 |          |           |                 |
+| Total                    |     0.097 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -151,7 +151,7 @@ Table of Contents
 |       BSCANID.u_xsdbm_id |     0.003 |
 |   u_ila_0                |     0.015 |
 |     inst                 |     0.015 |
-|       ila_core_inst      |     0.014 |
+|       ila_core_inst      |     0.015 |
 +--------------------------+-----------+
 
 
